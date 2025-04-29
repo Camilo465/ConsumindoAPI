@@ -1,10 +1,7 @@
-﻿using Application.Interfaces.Auth;
-using Application.Services.Auth;    
-using Arguments.Arguments.Token;
+﻿using Application.Interfaces.Auth;  
+using Arguments.Entities.Token;
 using BaseLibrary.Controllers;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 
 namespace ProjetosApi.Controllers
 {

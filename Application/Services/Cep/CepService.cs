@@ -1,9 +1,7 @@
 ﻿using ApiClient.RefitInterfaces;
-
 using Arguments.Entities.Cep;
 using BaseLibrary.Arguments;
 using BaseLibrary.Services;
-using Newtonsoft.Json;
 
 namespace Application.Interfaces.Entities
 {

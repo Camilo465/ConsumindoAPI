@@ -1,4 +1,4 @@
-﻿namespace Application.Services.Token
+﻿namespace Application.Entities.Token
 {
     public static class SecurityKeyJwt
     {

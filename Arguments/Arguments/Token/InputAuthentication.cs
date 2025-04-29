@@ -1,4 +1,4 @@
-﻿namespace Arguments.Arguments.Token
+﻿namespace Arguments.Entities.Token
 {
     public class InputAuthentication
     {

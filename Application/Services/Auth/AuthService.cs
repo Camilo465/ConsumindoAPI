@@ -1,6 +1,6 @@
 ﻿using Application.Interfaces.Auth;
-using Application.Services.Token;
-using Arguments.Arguments.Token;
+using Application.Entities.Token;
+using Arguments.Entities.Token;
 using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -11,7 +11,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Services.Auth
+namespace Application.Entities.Auth
 {
     public class AuthService : IAuthService
     {

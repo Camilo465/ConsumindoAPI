@@ -1,5 +1,4 @@
-﻿
-using Arguments.Entities.Cep;
+﻿using Arguments.Entities.Cep;
 using BaseLibrary.Arguments;
 
 namespace Application.Interfaces
