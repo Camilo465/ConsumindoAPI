@@ -9,6 +9,8 @@ using Refit;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using Application.Interfaces.OAuth2;
+using Application.Services.OAuth2;
 
 namespace ProjetosApi.Ioc
 {
@@ -22,7 +24,6 @@ namespace ProjetosApi.Ioc
             {
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "Projeto integração", Version = "v1" });
 
-                // Configura��o de seguran�a para o Swagger
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
@@ -91,6 +92,12 @@ namespace ProjetosApi.Ioc
                     ClockSkew = TimeSpan.Zero
                 };
             });
+        }
+        public static void AddOAuth2(this IServiceCollection services)
+        {
+            services.AddHttpClient();
+            services.AddScoped<IGoogleAuthService, GoogleAuthService>();
+
         }
     }
 }

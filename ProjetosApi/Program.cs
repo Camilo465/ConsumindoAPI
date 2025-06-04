@@ -1,13 +1,16 @@
 using ProjetosApi.Ioc;
+using ProjetosApi.Middlewares;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddSwaggerConfiguration();
 builder.Services.AddScopedServices();
 builder.Services.AddRefitSettings();
 builder.Services.AddToken();
+builder.Services.AddOAuth2();
 
 var app = builder.Build();
 
