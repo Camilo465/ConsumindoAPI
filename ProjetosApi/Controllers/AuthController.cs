@@ -26,7 +26,7 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> GoogleCallback([FromQuery] string code)
     {
         var tokenResponse = await _authService.ExchangeCodeForTokenAsync(code);
-        return Ok(JsonDocument.Parse(tokenResponse)); // retorna access_token, id_token etc
+        return Ok(JsonDocument.Parse(tokenResponse));
     }
 }
 

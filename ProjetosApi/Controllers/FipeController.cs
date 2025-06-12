@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ProjetosApi.Controllers
 {
-    [Route("api/[controller]")]    
+    [Route("api/[controller]")]
     [ApiController]
     [Authorize]
     public class FipeController(IFipeService service) : BaseController<IFipeService>(service)
