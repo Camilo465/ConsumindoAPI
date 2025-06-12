@@ -10,9 +10,9 @@ namespace ProjetosApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class LoginController(IAuthService service) : BaseController<IAuthService>(service)
-    {       
+    {
 
-        [HttpPost]
+        /* [HttpPost]
         public IActionResult Auth(InputAuthentication inputAuthentication)
         {
             var validUsers = new List<UserData>
@@ -31,7 +31,7 @@ namespace ProjetosApi.Controllers
             var token = _service.GenerateJwtToken(user, HttpContext, user.Email);
 
             return Ok(new { Token = token });
-        }
+        } */
 
         [HttpPost("google")]
         public async Task<IActionResult> AuthGoogle([FromBody] InputGoogleToken input)
@@ -59,7 +59,7 @@ namespace ProjetosApi.Controllers
             {
                 Email = payload.Email,
                 Sub = payload.Subject,
-                Identificador = 0, 
+                Identificador = 0,
                 AccessKey = null
             };
 
