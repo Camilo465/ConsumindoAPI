@@ -1,5 +1,5 @@
-﻿using Application.Interfaces.Auth;
-using Application.Entities.Token;
+﻿using Application.Entities.Token;
+using Application.Interfaces.Auth;
 using Arguments.Entities.Token;
 using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
@@ -20,9 +20,9 @@ namespace Application.Entities.Auth
             List<Claim> claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Iss, _httpContext?.Request.Host.Value ?? string.Empty),
-                new Claim(JwtRegisteredClaimNames.Sub, sub), 
+                new Claim(JwtRegisteredClaimNames.Sub, sub),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim("Identificador", data.Identificador.ToString()) 
+                new Claim("Identificador", data.Identificador.ToString())
             };
 
             SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(SecurityKeyJwt.Key));

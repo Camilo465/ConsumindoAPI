@@ -1,4 +1,4 @@
-﻿namespace Arguments.Entities.Token
+﻿/* namespace Arguments.Entities.Token
 {
     public class InputAuthentication
     {
@@ -6,3 +6,4 @@
         public string? Email { get; set; }
     }
 }
+ */
